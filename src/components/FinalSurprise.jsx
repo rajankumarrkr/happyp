@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { birthdayData } from '../data/birthdayData';
 
@@ -6,12 +6,12 @@ export default function FinalSurprise({ isVisible }) {
   const [visibleIndex, setVisibleIndex] = useState(-1);
   const { finalSurprise } = birthdayData;
 
-  const allItems = [
+  const allItems = useMemo(() => [
     ...finalSurprise.lines.map((l) => ({ ...l, type: 'line' })),
     ...finalSurprise.reveals.map((r) => ({ ...r, type: 'reveal' })),
     { ...finalSurprise.climax, type: 'climax' },
     { ...finalSurprise.closing, type: 'closing' },
-  ];
+  ], [finalSurprise]);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -21,7 +21,7 @@ export default function FinalSurprise({ isVisible }) {
     );
 
     return () => timers.forEach(clearTimeout);
-  }, [isVisible]);
+  }, [isVisible, allItems]);
 
   const confettiColors = ['#FFB6C1', '#BE123C', '#800020', '#F5E6CC', '#d4a574', '#e1436a', '#ffd1d9'];
 
@@ -38,12 +38,12 @@ export default function FinalSurprise({ isVisible }) {
             key={i}
             className="absolute rounded-full bg-cream"
             style={{
-              width: `${1 + Math.random() * 2}px`,
-              height: `${1 + Math.random() * 2}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: 0.15 + Math.random() * 0.3,
-              animation: `twinkle ${2 + Math.random() * 4}s ease-in-out ${Math.random() * 3}s infinite`,
+              width: `${1 + (i % 3)}px`,
+              height: `${1 + (i % 3)}px`,
+              left: `${(i * 17) % 100}%`,
+              top: `${(i * 23) % 100}%`,
+              opacity: 0.2 + (i % 5) * 0.1,
+              animation: `twinkle ${2 + (i % 4)}s ease-in-out ${(i % 3)}s infinite`,
             }}
           />
         ))}
@@ -57,8 +57,8 @@ export default function FinalSurprise({ isVisible }) {
               key={`fw-${i}`}
               className="absolute"
               style={{
-                left: `${10 + Math.random() * 80}%`,
-                top: `${5 + Math.random() * 60}%`,
+                left: `${10 + (i * 7) % 80}%`,
+                top: `${5 + (i * 9) % 60}%`,
               }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: [0, 1.5, 0], opacity: [0, 1, 0] }}
@@ -93,14 +93,14 @@ export default function FinalSurprise({ isVisible }) {
               key={`heart-${i}`}
               className="absolute text-rose/30"
               style={{
-                left: `${Math.random() * 100}%`,
-                fontSize: `${0.8 + Math.random() * 1.5}rem`,
+                left: `${(i * 6.6) % 100}%`,
+                fontSize: `${0.9 + (i % 3) * 0.4}rem`,
               }}
               initial={{ y: '110vh', opacity: 0 }}
               animate={{ y: '-10vh', opacity: [0, 0.5, 0] }}
               transition={{
-                duration: 5 + Math.random() * 4,
-                delay: Math.random() * 3,
+                duration: 5 + (i % 4),
+                delay: (i % 3),
                 repeat: Infinity,
               }}
             >
@@ -176,7 +176,6 @@ export default function FinalSurprise({ isVisible }) {
                     {item.message}
                   </p>
 
-                  {/* Final decorative elements */}
                   <motion.div
                     className="flex justify-center gap-4 mt-10"
                     animate={{ opacity: [0.3, 1, 0.3] }}
@@ -188,7 +187,7 @@ export default function FinalSurprise({ isVisible }) {
                   </motion.div>
 
                   <motion.p
-                    className="text-cream/20 text-xs mt-8 tracking-widest"
+                    className="text-cream/20 text-xs mt-8 tracking-widest font-mono"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2 }}

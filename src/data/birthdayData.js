@@ -1,11 +1,11 @@
 export const birthdayData = {
-  girlfriendName: "Pooja",
-  nickname: "Pihu",
+  girlfriendName: "Meri Jaan ❤️",
+  nickname: "Meri Jaan",
   birthday: "15 September",
 
   // Intro screen
   heroMessages: [
-    "Hey Pooja...",
+    "Hey Meri Jaan...",
     "I made something for you.",
     "But promise me one thing...",
   ],
@@ -14,7 +14,7 @@ export const birthdayData = {
   birthdayReveal: {
     date: "15 September",
     subtitle: "The day someone very special came into this world.",
-    greeting: "Happy Birthday, Pooja ❤️",
+    greeting: "Happy Birthday, Meri Jaan ❤️",
     messages: [
       "Today isn't just another day...",
       "Today is your day.",
@@ -25,11 +25,11 @@ export const birthdayData = {
   personalMessage: {
     heading: "A little something from my heart...",
     paragraphs: [
-      "Dear Pooja,",
+      "Dear Meri Jaan,",
       "Aaj sirf tumhara birthday nahi hai... mere liye ye woh din hai jis din duniya ko tum mili thi, aur meri life ko ek aisi person mili jo mere liye bahut special hai.",
       "Main perfect nahi hoon, aur shayad apni feelings ko words mein explain karna bhi mushkil hai... but one thing I know — having you in my life is something I'll always be grateful for.",
       "Tumhari smile, tumhari baatein, tumhari little little habits... pata nahi kab ye sab meri favourite cheezein ban gayi.",
-      "Happy Birthday, Pooja.",
+      "Happy Birthday, Meri Jaan.",
       "I hope you always keep smiling.",
       "❤️",
     ],
@@ -41,12 +41,67 @@ export const birthdayData = {
     ],
   },
 
+  // Romantic Shayari collection
+  shayariList: [
+    {
+      id: 1,
+      title: "Tum… Meri Har Khushi Ka Matlab Ho ❤️",
+      subtitle: "Kuch rishte lafzon se nahi, ehsaason se likhe jaate hain…",
+      stanzas: [
+        [
+          "Suraj se roshan subah hoti hai,",
+          "Chaand se haseen raat hoti hai,",
+          "Phoolon se mehakti hai duniya,",
+          "Par meri duniya tumse khaas hoti hai. ❤️"
+        ],
+        [
+          "Tumhari muskurahat meri favourite roshni hai,",
+          "Tumhari aankhon mein meri chhoti si duniya hai,",
+          "Tumhari awaaz dil ko sukoon de jaati hai,",
+          "Aur tumhari ek “haan” meri poori duniya bana jaati hai. 🥹❤️"
+        ],
+        [
+          "Tum gussa karo, toh bhi pyaari lagti ho,",
+          "Tum chup raho, toh bhi sabse khaas lagti ho,",
+          "Tum paas raho ya door…",
+          "Meri har dua mein tum hi nazar aati ho. 🌸"
+        ],
+        [
+          "Aur agar koi mujhse pooche—",
+          "“Tumhari favourite person kaun hai?”",
+          "",
+          "Toh jawab dene ki zarurat hi kya hai…",
+          "Meri smile dekh lena, jawab mil jayega. ❤️"
+        ]
+      ]
+    },
+    {
+      id: 2,
+      title: "Meri Aankhon Se Dekho Khud Ko… 💕",
+      subtitle: "Ab ye kaanch ka tukda kya batayega tumhe...",
+      stanzas: [
+        [
+          "Tum khoobsurat jaise chaand lagti ho,",
+          "Tum nadaan, but pyaari behisaab lagti ho…"
+        ],
+        [
+          "Ab ye kaanch ka tukda kya batayega tumhe,",
+          "Tumhari khoobsurati ka…"
+        ],
+        [
+          "Zara meri aankhon se poochho,",
+          "Kitni lajawab lagti ho… ❤️"
+        ]
+      ]
+    }
+  ],
+
   // Love letter
   loveLetter: {
     envelope: "You have one unopened letter.",
     buttonText: "Open My Letter",
     content: [
-      "My Dearest Pooja,",
+      "My Dearest Meri Jaan,",
       "",
       "There are some things that are hard to say in person, so I'm writing them here for you...",
       "",
@@ -293,7 +348,7 @@ export const birthdayData = {
       id: 33,
       image: "/memories/memory33.jpg",
       title: "Perfect 💕",
-      date: "Just being Pooja",
+      date: "Just being Meri Jaan",
       caption: "You don't have to try to be special... you already are.",
     },
     {
@@ -308,7 +363,7 @@ export const birthdayData = {
       image: "/memories/memory35.jpg",
       title: "My World ❤️",
       date: "Now and always",
-      caption: "35 photos bhi kam hain... you deserve an entire gallery, Pooja.",
+      caption: "35 photos bhi kam hain... you deserve an entire gallery, Meri Jaan.",
     },
   ],
 
@@ -325,7 +380,7 @@ export const birthdayData = {
 
   // Interactive question
   question: {
-    setup: "Pooja, ek question hai...",
+    setup: "Meri Jaan, ek question hai...",
     main: "Do you know how special you are to me?",
     yesResponse: "Good... but I still have something to prove. 😊",
     noResponse: "Then I guess I have to show you... ❤️",
@@ -337,7 +392,7 @@ export const birthdayData = {
       label: "Open when you miss me.",
       emoji: "🎁",
       message:
-        "Whenever you miss me, just close your eyes and remember — I'm always thinking of you. Distance means nothing when someone means everything. You're always in my heart, Pooja. ❤️",
+        "Whenever you miss me, just close your eyes and remember — I'm always thinking of you. Distance means nothing when someone means everything. You're always in my heart, Meri Jaan. ❤️",
     },
     {
       label: "Open when you need a smile.",
@@ -349,7 +404,7 @@ export const birthdayData = {
       label: "Open when you want to know how much you mean to me.",
       emoji: "🎁",
       message:
-        "You mean more to me than all the stars in the sky, all the songs ever written, and all the words ever spoken. You're not just special — you're irreplaceable. There's only one Pooja, and I'm so grateful she's in my life. ❤️",
+        "You mean more to me than all the stars in the sky, all the songs ever written, and all the words ever spoken. You're not just special — you're irreplaceable. There's only one Meri Jaan, and I'm so grateful she's in my life. ❤️",
     },
   ],
 
@@ -400,15 +455,15 @@ export const birthdayData = {
 
   // Birthday cake
   cake: {
-    message: "Make a wish, Pooja...",
+    message: "Make a wish, Meri Jaan...",
     candleCount: 5,
-    afterWish: "Happy Birthday, Pooja ❤️",
+    afterWish: "Happy Birthday, Meri Jaan ❤️",
   },
 
   // Final surprise
   finalSurprise: {
     lines: [
-      { text: "Pooja...", delay: 0 },
+      { text: "Meri Jaan...", delay: 0 },
       { text: "Before you leave...", delay: 2000 },
       { text: "I just want you to remember one thing.", delay: 4000 },
     ],
@@ -418,7 +473,7 @@ export const birthdayData = {
       { text: "And you will always have a very special place in my heart.", delay: 12000 },
     ],
     climax: {
-      text: "Happy Birthday, Pihu ❤️",
+      text: "Happy Birthday, Meri Jaan ❤️",
       delay: 15000,
     },
     closing: {
